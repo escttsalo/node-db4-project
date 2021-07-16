@@ -6,7 +6,7 @@ server.use(express.json());
 
 server.use('/api/recipes', recipesRouter);
 
-server.get('/', (req, res) => {
+server.use('*', (req, res) => {
     res.status(200).json({message: "We're up!"})
 });
 
